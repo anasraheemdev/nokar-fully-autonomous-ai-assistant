@@ -25,17 +25,27 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install dependencies
+    - name: Install system dependencies (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libportaudio2 libegl1 libgl1-mesa-glx libxkbcommon-x11-0 xvfb
+
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Syntax & Compilation Validation
       run: |
-        python -m py_compile main.py ui.py setup.py
-        python -m py_compile actions/*.py core/*.py memory/*.py
+        python -m compileall -q actions core memory tests main.py ui.py setup.py
 
-    - name: Run UI and Feature Verification Suite (Headless)
+    - name: Run Headless Core Test Suite
+      run: |
+        python tests/test_ci_headless.py
+
+    - name: Run UI and Feature Verification Suite (Windows)
+      if: runner.os == 'Windows'
       env:
         QT_QPA_PLATFORM: offscreen
       run: |
