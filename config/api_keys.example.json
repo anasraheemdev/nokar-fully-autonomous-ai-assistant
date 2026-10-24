@@ -1,0 +1,27 @@
+{
+    "gemini_api_key": "YOUR_GEMINI_API_KEY",
+    "os_system": "windows",
+    "assistant_name": "Nokar",
+    "user_name": "Commander",
+    "news_api_key": "YOUR_NEWS_API_KEY_OPTIONAL",
+    "weather_api_key": "YOUR_OPENWEATHER_API_KEY_OPTIONAL",
+    "default_city": "London",
+    "autostart_enabled": false,
+    "morning_brief_enabled": true,
+    "ui_color": "#a855f7",
+    "email": {
+        "address": "user@example.com",
+        "password": "YOUR_EMAIL_APP_PASSWORD",
+        "smtp_host": "smtp.hostinger.com",
+        "smtp_port": 465,
+        "smtp_ssl": true,
+        "imap_host": "imap.hostinger.com",
+        "imap_port": 993,
+        "imap_ssl": true,
+        "pop_host": "pop.hostinger.com",
+        "pop_port": 995,
+        "pop_ssl": true,
+        "protocol": "imap"
+    },
+    "voice_name": "Puck"
+}

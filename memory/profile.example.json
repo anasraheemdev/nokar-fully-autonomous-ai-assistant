@@ -1,0 +1,23 @@
+{
+  "profile_version": "1.0",
+  "subject": "User Profile",
+  "identity": {
+    "full_name": "Alex Mercer",
+    "preferred_short_name": "Alex",
+    "salutation": "Commander",
+    "roles": [
+      "Software Engineer",
+      "AI Researcher",
+      "Builder"
+    ]
+  },
+  "contacts": {
+    "primary_email": "alex@example.com",
+    "work_email": "alex@company.com"
+  },
+  "preferences": {
+    "tone": "concise, direct, highly technical",
+    "ide": "Antigravity IDE / VS Code",
+    "os": "Windows 11"
+  }
+}
